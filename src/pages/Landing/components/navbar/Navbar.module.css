@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap');
+
+.logo {
+    position: absolute;
+    width: 186px;
+    height: 62px;
+    left: 100px;
+    top: 25px;
+}
+
+.signin {
+    position: absolute;
+    width: 80px;
+    height: 33px;
+    left: 920px;
+    top: 40px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.signup {
+    position: absolute;
+    width: 90px;
+    height: 33px;
+    left: 1050px;
+    top: 40px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about {
+    position: absolute;
+    width: 73px;
+    height: 33px;
+    left: 1180px;
+    top: 40px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

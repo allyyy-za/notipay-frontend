@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans:wght@700&display=swap');
+
+.heading {
+    position: absolute;
+    width: 604px;
+    height: 312px;
+    left: 100px;
+    top: 130px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 104.4%;
+    letter-spacing: -0.03em;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.landingImage {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 750px;
+    top: 70px;
+}
+
+.signin {
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    left: 100px;
+    top: 420px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 33px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.signup {
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    left: 250px;
+    top: 420px;
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+    border-color: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    border-width: 2px;
+}

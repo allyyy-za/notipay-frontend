@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans:wght@700&display=swap');
+
+
+h1 {
+    position: absolute;
+    width: 111px;
+    height: 44px;
+    left: 190px;
+    top: 40px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+p {
+    position: absolute;
+    width: 349px;
+    height: 20px;
+    left: 47px;
+    top: 100px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #383838;
+}
+
+img {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 141px;
+    top: 60px;
+}
+
+.loginModal {
+    background: #FFF1ff;
+    width: 443px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.emailTextField {
+    position: absolute;
+    width: 334px;
+    height: 47px;
+    left: 54px;
+    top: 200px;
+}
+
+.passwordTextField {
+    position: absolute;
+    width: 334px;
+    height: 47px;
+    left: 54px;
+    top: 275px;
+}
