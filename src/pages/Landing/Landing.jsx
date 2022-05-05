@@ -21,7 +21,7 @@ const Landing = () => {
                 <Button variant="contained" className={styles.signin} onClick={handleOpen} disableElevation>SIGN IN</Button>
                 <Button variant="outlined" className={styles.signup} onClick={handleOpen} disableElevation> SIGN UP</Button>
             </div>
-            <Login open={open}/>
+            {/* <Login open={open}/> */}
         </div>
     )
 }

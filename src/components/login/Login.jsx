@@ -1,30 +1,70 @@
-import React from 'react';
-import { Modal, Box, TextField } from '@mui/material';
-import { Component } from 'react';
+import React, { useState } from 'react';
+import { Grid, Link, Typography } from '@mui/material';
 import styles from './login.module.css';
 import smallLogo from '../../assets/images/logoOnly.png';
+import CustomTextField from '../controls/CustomTextField';
+import CustomButton from '../controls/CustomButton';
 
 
-export default class Login extends Component {
+const initialFieldValues = {
+    email: '',
+    password: '',
+}
 
-    render() {
-        return(
-            <div>
-                <Modal
-                    open={this.props.open}
-                    aria-labelledby="Sign In"
-                    aria-describedby="Sign In to your Account"
-                    className={styles.loginModal}
-                >
-                    <Box>
-                        <img src={smallLogo} alt="Logo" />
-                        <h1>Sign In</h1>
-                        <p>Start keeping track of your subscriptions and bills.</p>
-                        <TextField className={styles.emailTextField} label="Email" variant="outlined" />
-                        <TextField className={styles.passwordTextField} type="password" label="Password" variant="outlined" />
-                    </Box>
-                </Modal>
-            </div>
-        );
+export default function Login() {
+    
+    const [values, setValues] = useState(initialFieldValues);
+
+    const handleInputChange = e => {
+        const {name, value } = e.target;
+        setValues({
+            ...values,
+            [name]:value
+        });
     }
+
+    return(
+        <form>
+            <Grid container>
+                <Grid item xs={12}>
+                    <div className={styles.title}>
+                        <img src={smallLogo} alt="Logo" />
+                        <Typography className={styles.signInLabel}>
+                        Sign In
+                        </Typography>
+                        <p>Start keeping track of your subscriptions and bills.</p>
+                    </div>
+                    <CustomTextField
+                    className={styles.emailField} 
+                    value={values.email}
+                    label="Email" 
+                    name="email"
+                    variant="outlines"
+                    onChange = {handleInputChange}
+                    />
+                    <CustomTextField 
+                    className={styles.passwordField}
+                    value={values.password}
+                    label="Password" 
+                    name="password"
+                    variant="outlined" 
+                    type="password"
+                    onChange= {handleInputChange}
+                    />
+                    <CustomButton 
+                    className={styles.signInButton}
+                    variant="contained"
+                    onClick={handleInputChange}
+                    >SIGN IN</CustomButton>
+                    <CustomButton 
+                    className={styles.signInButton}
+                    variant="contained"
+                    onClick={handleInputChange}
+                    >SIGN UP</CustomButton>
+                    <Link href="#" underline="none" className={styles.createLink}>No Account? <b>Create Now</b></Link>
+                    <Link href="#" underline="none" className={styles.forgotLink}>Forgot Password?</Link>
+                </Grid>
+            </Grid>
+        </form>
+    );
 }
