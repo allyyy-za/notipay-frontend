@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Grid, Link, Typography } from '@mui/material';
 import styles from './login.module.css';
-import smallLogo from '../../assets/images/logoOnly.png';
-import CustomTextField from '../controls/CustomTextField';
-import CustomButton from '../controls/CustomButton';
+import smallLogo from '../../../../assets/images/logoOnly.png';
+import CustomTextField from '../../../../components/controls/CustomTextField';
+import CustomButton from '../../../../components/controls/CustomButton';
 
 
 const initialFieldValues = {
@@ -51,6 +51,7 @@ export default function Login() {
                     type="password"
                     onChange= {handleInputChange}
                     />
+                    <div className={styles.lower}>
                     <CustomButton 
                     className={styles.signInButton}
                     variant="contained"
@@ -63,6 +64,7 @@ export default function Login() {
                     >SIGN UP</CustomButton>
                     <Link href="#" underline="none" className={styles.createLink}>No Account? <b>Create Now</b></Link>
                     <Link href="#" underline="none" className={styles.forgotLink}>Forgot Password?</Link>
+                    </div>
                 </Grid>
             </Grid>
         </form>

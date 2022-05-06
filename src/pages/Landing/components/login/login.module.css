@@ -1,0 +1,119 @@
+
+
+.signInLabel {
+    position: absolute !important;
+    width: 111px !important;
+    height: 44px !important;
+    left: 190px !important;
+    top: 71px !important;
+
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 32px !important;
+    line-height: 44px !important;
+    text-align: center !important;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+p {
+    position: absolute;
+    width: 349px;
+    height: 20px;
+    left: 47px;
+    top: 123px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #383838;
+}
+
+img {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 141px;
+    top: 69px;
+}
+
+.loginModal {
+    background: #FFF1ff;
+    width: 443px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.emailField {
+    position: absolute !important;
+    width: 334px !important;
+    height: 47px !important;
+    left: 54px !important;
+    top: 200px !important;
+}
+
+.passwordField {
+    position: absolute !important;
+    width: 334px !important;
+    height: 47px !important;
+    left: 54px !important;
+    top: 275px!important;
+    border-color: #34C2EB !important;
+}
+
+
+.signInButton {
+    position: absolute !important;
+    width: 130px !important;
+    height: 50px !important;
+    left: 154px !important;
+    top: 391px !important;
+}
+
+.createLink {
+    position: absolute !important;
+    width: 192px !important;
+    height: 22px !important;
+    left: 123px !important;
+    top: 460px !important;
+
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    text-align: center !important;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.forgotLink {
+    position: absolute !important;
+    width: 192px !important;
+    height: 22px !important;
+    left: 128px !important;
+    top: 495px !important;
+
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    text-align: center !important;
+
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}

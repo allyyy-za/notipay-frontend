@@ -1,14 +1,9 @@
-.title {
-    position: absolute;
-    justify-content: center;
-}
-
-.signInLabel {
+.signUpLabel {
     position: absolute !important;
-    width: 111px !important;
+    width: 123px !important;
     height: 44px !important;
-    left: 190px !important;
-    top: 80px !important;
+    left: 184px !important;
+    top: 69px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
@@ -44,56 +39,63 @@ img {
     position: absolute;
     width: 47px;
     height: 47px;
-    left: 141px;
-    top: 80px;
+    left: 135px;
+    top: 67px;
 }
 
-.loginModal {
-    background: #FFF1ff;
-    width: 443px;
-    height: 500px;
-    border-radius: 5px;
+.fullNameField {
+    position: absolute !important;
+    width: 334px !important;
+    height: 47px !important;
+    left: 55px !important;
+    top: 183px !important;
 }
 
 .emailField {
     position: absolute !important;
     width: 334px !important;
     height: 47px !important;
-    left: 54px !important;
-    top: 200px !important;
+    left: 55px !important;
+    top: 254px !important;
 }
 
 .passwordField {
     position: absolute !important;
     width: 334px !important;
     height: 47px !important;
-    left: 54px !important;
-    top: 275px!important;
+    left: 55px !important;
+    top: 325px!important;
     border-color: #34C2EB !important;
 }
 
 
-.signInButton {
+.signUpButton {
     position: absolute !important;
     width: 130px !important;
     height: 50px !important;
-    left: 122px !important;
-    top: 391px !important;
+    left: 157px !important;
+    top: 461px !important;
 }
 
-.createLink {
+.alreadyLink {
     position: absolute !important;
-    width: 192px !important;
+    width: 247px !important;
     height: 22px !important;
-    left: 100px !important;
-    top: 460px !important;
+    left: 98px !important;
+    top: 539px !important;
+
+    /* Body Text */
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
     font-weight: 400 !important;
     font-size: 16px !important;
     line-height: 22px !important;
+    /* identical to box height */
+
     text-align: center !important;
+
+    /* Main Gradient */
 
     background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
     -webkit-background-clip: text !important;
@@ -101,22 +103,21 @@ img {
     background-clip: text !important;
 }
 
-.forgotLink {
+.note {
     position: absolute !important;
-    width: 192px !important;
-    height: 22px !important;
-    left: 100px !important;
-    top: 495px !important;
+    width: 292px !important;
+    height: 36px !important;
+    left: 76px !important;
+    top: 399px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
     font-weight: 400 !important;
-    font-size: 16px !important;
-    line-height: 22px !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
     text-align: center !important;
 
-    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
+    /* Secondary Black */
+
+    color: rgba(29, 25, 18, 0.75) !important;
 }

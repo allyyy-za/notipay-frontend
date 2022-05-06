@@ -7,58 +7,61 @@
 }
 
 .signin {
-    position: absolute;
-    width: 80px;
-    height: 33px;
-    left: 920px;
-    top: 40px;
+    position: absolute !important;
+    width: 110px !important;
+    height: 33px !important;
+    left: 920px !important;
+    top: 40px !important;
 
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 33px;
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 33px !important;
+    text-transform: none !important;
 
-    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
 
 .signup {
-    position: absolute;
-    width: 90px;
-    height: 33px;
-    left: 1050px;
-    top: 40px;
+    position: absolute !important;
+    width: 110px !important;
+    height: 33px !important;
+    left: 1050px !important;
+    top: 40px !important;
 
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 33px;
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 33px !important;
+    text-transform: none !important;
 
-    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
 
 .about {
-    position: absolute;
-    width: 73px;
-    height: 33px;
-    left: 1180px;
-    top: 40px;
+    position: absolute !important;
+    width: 110px !important;
+    height: 33px !important;
+    left: 1180px !important;
+    top: 40px !important;
 
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 33px;
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 33px !important;
+    text-transform: none !important;
 
-    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }

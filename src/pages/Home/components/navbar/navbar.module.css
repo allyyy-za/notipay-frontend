@@ -1,0 +1,26 @@
+.logo {
+    position: absolute;
+    width: 186px;
+    height: 62px;
+    left: 100px;
+    top: 25px;
+}
+
+.notificationsIconButton {
+    position: absolute !important;
+    width: 50px !important;
+    height: 50px !important;
+    left: 1120px !important;
+    top: 25px !important;
+    color: #34C2EB !important;
+}
+
+
+.profileIconButton {
+    position: absolute !important;
+    width: 50px !important;
+    height: 50px !important;
+    left: 1180px !important;
+    top: 25px !important;
+    color: #34C2EB !important;
+}

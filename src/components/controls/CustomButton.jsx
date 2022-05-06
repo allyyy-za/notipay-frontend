@@ -14,6 +14,7 @@ const CssButton = styled(Button)({
   lineHeightStep: 33,
   textAlign: 'center',
   color: '#FFFFFF', 
+  borderRadius: 8,
   background: 'linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%)',
   '&:hover': {
     background: 'linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%)',
@@ -31,7 +32,7 @@ export default function CustomButton(props) {
     return (
         <CssButton
             className={className}
-            variant={variant || "contained"}
+            variant={variant}
             onClick={onClick}
             {...other}
         />
