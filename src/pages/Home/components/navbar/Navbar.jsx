@@ -2,9 +2,8 @@ import React from 'react'
 import logoImage from "../../../../assets/images/logo.png";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { Button, IconButton } from '@mui/material';
+import { IconButton } from '@mui/material';
 import styles from './navbar.module.css';
-import notificationsIcon from "../../../../assets/images/notificationsIcon.png";
 
 export default function Navbar() {
   return (

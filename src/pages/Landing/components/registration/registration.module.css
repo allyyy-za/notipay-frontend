@@ -3,7 +3,7 @@
     width: 123px !important;
     height: 44px !important;
     left: 184px !important;
-    top: 69px !important;
+    top: 59px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
@@ -23,7 +23,7 @@ p {
     width: 349px;
     height: 20px;
     left: 47px;
-    top: 123px;
+    top: 100px;
 
     font-family: 'Open Sans';
     font-style: normal;
@@ -40,7 +40,7 @@ img {
     width: 47px;
     height: 47px;
     left: 135px;
-    top: 67px;
+    top: 57px;
 }
 
 .fullNameField {
@@ -48,7 +48,7 @@ img {
     width: 334px !important;
     height: 47px !important;
     left: 55px !important;
-    top: 183px !important;
+    top: 163px !important;
 }
 
 .emailField {
@@ -56,7 +56,15 @@ img {
     width: 334px !important;
     height: 47px !important;
     left: 55px !important;
-    top: 254px !important;
+    top: 234px !important;
+}
+
+.usernameField {
+    position: absolute !important;
+    width: 334px !important;
+    height: 47px !important;
+    left: 55px !important;
+    top: 305px !important;
 }
 
 .passwordField {
@@ -64,8 +72,7 @@ img {
     width: 334px !important;
     height: 47px !important;
     left: 55px !important;
-    top: 325px!important;
-    border-color: #34C2EB !important;
+    top: 376px!important;
 }
 
 
@@ -74,7 +81,7 @@ img {
     width: 130px !important;
     height: 50px !important;
     left: 157px !important;
-    top: 461px !important;
+    top: 500px !important;
 }
 
 .alreadyLink {
@@ -82,14 +89,14 @@ img {
     width: 247px !important;
     height: 22px !important;
     left: 98px !important;
-    top: 539px !important;
+    top: 560px !important;
 
     /* Body Text */
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
     font-weight: 400 !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     line-height: 22px !important;
     /* identical to box height */
 
@@ -105,15 +112,15 @@ img {
 
 .note {
     position: absolute !important;
-    width: 292px !important;
+    width: 300px !important;
     height: 36px !important;
     left: 76px !important;
-    top: 399px !important;
+    top: 450px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
     font-weight: 400 !important;
-    font-size: 13px !important;
+    font-size: 11px !important;
     line-height: 18px !important;
     text-align: center !important;
 

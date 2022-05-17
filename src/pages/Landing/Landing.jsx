@@ -24,7 +24,6 @@ const Landing = () => {
           SIGN IN
         </Button>
         <Button variant="outlined" className={styles.signup} onClick={openSignUpModal} disableElevation>
-          {" "}
           SIGN UP
         </Button>
       </div>

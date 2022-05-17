@@ -1,11 +1,9 @@
-
-
 .signInLabel {
     position: absolute !important;
     width: 111px !important;
     height: 44px !important;
     left: 190px !important;
-    top: 71px !important;
+    top: 59px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
@@ -42,7 +40,7 @@ img {
     width: 47px;
     height: 47px;
     left: 141px;
-    top: 69px;
+    top: 57px;
 }
 
 .loginModal {
@@ -52,7 +50,7 @@ img {
     border-radius: 5px;
 }
 
-.emailField {
+.usernameField {
     position: absolute !important;
     width: 334px !important;
     height: 47px !important;
@@ -80,17 +78,18 @@ img {
 
 .createLink {
     position: absolute !important;
-    width: 192px !important;
+    width: 220px !important;
     height: 22px !important;
-    left: 123px !important;
+    left: 113px !important;
     top: 460px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
     font-weight: 400 !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     line-height: 22px !important;
     text-align: center !important;
+    text-transform: none !important;
 
     background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
     -webkit-background-clip: text !important;
@@ -102,15 +101,16 @@ img {
     position: absolute !important;
     width: 192px !important;
     height: 22px !important;
-    left: 128px !important;
+    left: 125px !important;
     top: 495px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;
     font-weight: 400 !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     line-height: 22px !important;
     text-align: center !important;
+    text-transform: none !important;
 
     background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
     -webkit-background-clip: text !important;

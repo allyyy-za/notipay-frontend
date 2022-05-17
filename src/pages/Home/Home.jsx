@@ -1,12 +1,13 @@
-import React from 'react'
+import { Typography } from '@mui/material';
 import Navbar from './components/navbar/Navbar'
 
 export default function Home() {
+  const auth = localStorage.getItem("authToken");
   return (
     <div>
         <Navbar />
         <div>
-            {/* content */}
+          <Typography>Paid Subscriptions</Typography>
         </div>
     </div>
   )

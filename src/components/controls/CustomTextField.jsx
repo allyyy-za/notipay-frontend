@@ -22,18 +22,17 @@ const CssTextField = styled(TextField)({
 });
 
 export default function CustomTextField(props) {
-
-    const { name, label, value, error=null, type, className, onChange } = props;
-    return (
-        <CssTextField
-            className={className}
-            variant="outlined"
-            label={label}
-            name={name}
-            value={value}
-            onChange={onChange}
-            type={type}
-            {...(error && {error:true, helperText:error})}
-        />
-    );
+  const { name, label, value, error = null, type, className, onChange } = props;
+  return (
+    <CssTextField
+      className={className}
+      variant="outlined"
+      label={label}
+      name={name}
+      value={value}
+      onChange={onChange}
+      type={type}
+      {...(error && { error: true, helperText: error })}
+    />
+  );
 }
