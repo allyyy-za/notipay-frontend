@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import styles from "./styles/css/landing.module.css";
 import Login from "./components/login/Login";
 import { useState } from "react";
-import Popup from "../../components/controls/Popup";
 import Registration from "./components/registration/Registration";
 
 const Landing = () => {
@@ -27,12 +26,8 @@ const Landing = () => {
           SIGN UP
         </Button>
       </div>
-      <Popup openPopup={openSignInForm} setOpenPopup={setOpenSignInForm}>
-        <Login />
-      </Popup>
-      <Popup openPopup={openSignUpForm} setOpenPopup={setOpenSignUpForm}>
-        <Registration />
-      </Popup>
+      <Login openPopup={openSignInForm} setOpenPopup={setOpenSignInForm} />
+      <Registration openPopup={openSignUpForm} setOpenPopup={setOpenSignUpForm} />
     </div>
   );
 };

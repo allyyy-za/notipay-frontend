@@ -3,6 +3,7 @@ import "./App.css";
 import Landing from "./pages/Landing/Landing";
 import Home from "./pages/Home/Home";
 import PrivateRoute from "./util/PrivateRoute";
+import Subscription from "./pages/Home/components/subscription/Subscription";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route exact path="/subscriptions" element={<Subscription />} />
         </Routes>
       </BrowserRouter>
     </div>

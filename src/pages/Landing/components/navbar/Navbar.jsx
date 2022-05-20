@@ -1,7 +1,6 @@
 import logoImage from "../../../../assets/images/logo.png";
 import styles from "../navbar/Navbar.module.css";
 import { React, useState } from "react";
-import Popup from "../../../../components/controls/Popup";
 import Login from "../login/Login";
 import Registration from "../registration/Registration";
 import { Button } from "@mui/material";
@@ -27,12 +26,8 @@ export default function Navbar() {
           About
         </Button>
       </header>
-      <Popup openPopup={openSignInForm} setOpenPopup={setOpenSignInForm}>
-        <Login />
-      </Popup>
-      <Popup openPopup={openSignUpForm} setOpenPopup={setOpenSignUpForm}>
-        <Registration />
-      </Popup>
+      <Login openPopup={openSignInForm} setOpenPopup={setOpenSignInForm} />
+      <Registration openPopup={openSignUpForm} setOpenPopup={setOpenSignUpForm} />
     </>
   );
 }

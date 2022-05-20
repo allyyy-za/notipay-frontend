@@ -1,0 +1,37 @@
+.title {
+    position: relative !important;
+    width: 215.04px !important;
+    height: 27px !important;
+
+
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 27px !important;
+}
+
+.amountField {
+    position: relative  !important;
+    margin-top: -10px;
+
+    font-family: 'Open Sans' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    color: #FFFFFF !important;
+}
+
+.icons {
+    margin-top: -10px !important;
+}
+
+.editIcon {
+    color: #FFFFFF !important;
+}
+
+.deleteIcon {
+    color:#FFFFFF !important;
+    margin-left: -10px !important;
+}
