@@ -6,11 +6,14 @@ import CustomTextField from "../../../../components/controls/CustomTextField";
 import CustomButton from "../../../../components/controls/CustomButton";
 import { useLocalState } from "../../../../util/useLocalStorage";
 import Popup from "../../../../components/controls/Popup";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [auth, setAuth] = useLocalState("", "authToken");
+
+  const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -20,12 +23,13 @@ export default function Login(props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
     }).then((response) => {
-      try {
+      if (response.status === 200) {
         console.log("Successful login.");
         setAuth(response.headers.get("Authorization"));
-      } catch (e) {
-        console.log(e);
-        console.log("User not logged in.");
+        if (auth) {
+          navigate("/home");
+          window.location.reload();
+        }
       }
     });
   };

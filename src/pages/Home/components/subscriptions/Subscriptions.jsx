@@ -1,9 +1,11 @@
 import { Button, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import CustomCard from "../../../../components/controls/CustomCard";
+import AddIcon from '@mui/icons-material/Add';
 import { useLocalState } from "../../../../util/useLocalStorage";
+import styles from "./Subscriptions.module.css"
 
-export default function Subscription() {
+export default function Subscriptions() {
   const [auth, setAuth] = useLocalState("", "authToken");
   const [subscriptions, setSubscriptions] = useState([]);
 
@@ -52,15 +54,18 @@ export default function Subscription() {
   //     });
   // };
 
-  return (
+  return ( 
     <div>
       {/* <Button onClick={handleAddSubscription}>Add a Subscription</Button> */}
       <Grid container spacing={3}>
         {subscriptions.map(subscription => (
           <Grid item  key={subscription.subscriptionId}>
-            <CustomCard subscription={subscription} handleDelete={handleDeleteSubscription} />
+            <CustomCard cardContent={subscription} handleDelete={handleDeleteSubscription} />
           </Grid>
         ))}
+        <Grid item>
+          <Button className={styles.addButton} variant="outlined"><AddIcon />Add Subscription</Button>
+        </Grid>
       </Grid>
     </div>
   );

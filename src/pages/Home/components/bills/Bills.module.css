@@ -1,0 +1,14 @@
+.addButton {
+  width: 274px !important;
+  height: 164px !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+  border-width: 2px !important;
+  border-color: #13C690 !important;
+  
+  font-family: 'Open Sans' !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+}

@@ -5,12 +5,15 @@ import smallLogo from "../../../../assets/images/logoOnly.png";
 import CustomTextField from "../../../../components/controls/CustomTextField";
 import CustomButton from "../../../../components/controls/CustomButton";
 import Popup from "../../../../components/controls/Popup";
+import { useNavigate } from "react-router-dom";
 
 export default function Registration(props) {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -19,8 +22,12 @@ export default function Registration(props) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
-    }).then(() => {
-      console.log("New user registered.");
+    }).then((response) => {
+        if(response.status === 200) {
+          console.log("New user registered.");
+          navigate("/");
+          window.location.reload();
+        }
     });
   };
 
