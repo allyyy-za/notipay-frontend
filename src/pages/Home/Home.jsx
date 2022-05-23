@@ -14,9 +14,9 @@ export default function Home() {
           <h2 className={styles.title}>Paid Subscriptions</h2>
           <Subscriptions />
         </div>
-        <div>
+        <div className={styles.bill}>
           <h2 className={styles.title}>Bills</h2>
-          <Bills />
+          <Bills className={styles.popup} />
         </div>
       </div>
     </div>

@@ -1,13 +1,16 @@
 import { Button, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import CustomCard from "../../../../components/controls/CustomCard";
 import { useLocalState } from "../../../../util/useLocalStorage";
 import AddIcon from '@mui/icons-material/Add';
 import styles from "./Bills.module.css";
+import CustomCardBill from "../../../../components/controls/CustomCardBill";
+import AddBill from "../modals/AddBill";
 
 export default function Bills() {
   const [auth, setAuth] = useLocalState("", "authToken");
   const [bills, setBills] = useState([]);
+  const [openAddBillModal, setOpenAddBillModal] = useState(false);
+  const handleOpenAddBill = () => setOpenAddBillModal(true);
 
   useEffect(() => {
     fetch("api/bills", {
@@ -23,21 +26,24 @@ export default function Bills() {
       .then((data) => setBills(data));
   }, []);
 
+
+
   return (
     <div>
       <Grid container spacing={3}>
         {bills.map((bill) => (
           <Grid item key={bill.billId}>
-            <CustomCard cardContent={bill} />
+            <CustomCardBill cardContent={bill} />
           </Grid>
         ))}
         <Grid item>
-          <Button className={styles.addButton} variant="outlined">
+          <Button className={styles.addButton} variant="outlined" onClick={handleOpenAddBill}>
             <AddIcon />
             Add Bill
           </Button>
         </Grid>
       </Grid>
+      <AddBill openPopup={openAddBillModal} setOpenPopup={setOpenAddBillModal} />
     </div>
   );
 }

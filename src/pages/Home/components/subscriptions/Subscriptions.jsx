@@ -1,13 +1,16 @@
 import { Button, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import CustomCard from "../../../../components/controls/CustomCard";
+import CustomCardSubscription from "../../../../components/controls/CustomCardSubscription";
 import AddIcon from '@mui/icons-material/Add';
 import { useLocalState } from "../../../../util/useLocalStorage";
 import styles from "./Subscriptions.module.css"
+import AddSubscription from "../modals/AddSubscription";
 
 export default function Subscriptions() {
   const [auth, setAuth] = useLocalState("", "authToken");
   const [subscriptions, setSubscriptions] = useState([]);
+  const [openAddSubscriptionModal, setOpenAddSubscriptionModal] = useState(false);
+  const handleOpenAddSubscription = () => setOpenAddSubscriptionModal(true);
 
   useEffect(() => {
     fetch("api/subscriptions", {
@@ -60,13 +63,14 @@ export default function Subscriptions() {
       <Grid container spacing={3}>
         {subscriptions.map(subscription => (
           <Grid item  key={subscription.subscriptionId}>
-            <CustomCard cardContent={subscription} handleDelete={handleDeleteSubscription} />
+            <CustomCardSubscription cardContent={subscription} handleDelete={handleDeleteSubscription} />
           </Grid>
         ))}
         <Grid item>
-          <Button className={styles.addButton} variant="outlined"><AddIcon />Add Subscription</Button>
+          <Button className={styles.addButton} variant="outlined" onClick={handleOpenAddSubscription}><AddIcon />Add Subscription</Button>
         </Grid>
       </Grid>
+      <AddSubscription openPopup={openAddSubscriptionModal} setOpenPopup={setOpenAddSubscriptionModal}/>
     </div>
   );
 }
