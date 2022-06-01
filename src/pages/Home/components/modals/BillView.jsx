@@ -1,73 +1,74 @@
-import { Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import CustomButton from "../../../../components/controls/CustomButton";
-import CustomTextField from "../../../../components/controls/CustomTextField";
-import Popup from "../../../../components/controls/Popup";
-import { useLocalState } from "../../../../util/useLocalStorage";
-import styles from "./styles/AddSubscription.module.css";
+import { Grid, Typography } from '@mui/material';
+import React, { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
+import CustomButton from '../../../../components/controls/CustomButton';
+import CustomTextField from '../../../../components/controls/CustomTextField';
+import Popup from '../../../../components/controls/Popup';
+import { useLocalState } from '../../../../util/useLocalStorage'
+import styles from './styles/BillView.module.css';
 
-export default function AddSubscription(props) {
-  const [subscriptionName, setSubscriptionName] = useState("");
+export default function BillView(props) {
+  const [auth, setAuth] = useLocalState("", "authToken")
+  const [billName, setName] = useState("");
   const [amount, setAmount] = useState("");
-  const [renewalDate, setRenewalDate] = useState("");
+  const [dueDate, setDate] = useState(props.billView.dueDate);
   const [hasValue, setHasValue] = useState(false);
   const [focus, setFocused] = useState(false);
-  const [auth, setAuth] = useLocalState("", "authToken");
+
   const onFocus = () => setFocused(true);
   const onBlur = () => setFocused(false);
   const navigate = useNavigate();
 
-  const handleAddSubscription = (e) => {
+  const handleEditBill = (e) => {
     e.preventDefault();
-    const subscription = { subscriptionName, amount, renewalDate };
-    fetch("api/subscriptions", {
-      method: "POST",
+    const bill = { billName, amount, dueDate };
+    fetch("api/bills/billId=" + props.billView.billId, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${auth}`,
-      },
-      body: JSON.stringify(subscription),
+      }, body: JSON.stringify(bill),
     }).then((response) => {
       if (response.status === 200) {
-        console.log("New subscription added.");
+        console.log("Bill edited.");
         navigate("/home");
         window.location.reload();
       }
-    });
+    })
   };
 
   return (
-    <div className={styles.popup}>
+    <div>
       <Popup openPopup={props.openPopup} setOpenPopup={props.setOpenPopup}>
         <form>
           <Grid container>
             <Grid item xs={12}>
               <div className={styles.title}>
-                <Typography className={styles.addBillLabel}>Paid Subscriptions</Typography>
+                <Typography className={styles.editBillLabel}>Edit Bill</Typography>
               </div>
               <CustomTextField
                 className={styles.nameField}
-                value={subscriptionName}
-                label="Name of Subscription"
+                defaultValue={props.billView.billName}
+                label="Name of Bill"
                 name="name"
-                variant="outlines"
-                onChange={(e) => setSubscriptionName(e.target.value)}
+                variant="outlined"
+                type="text"
+                onChange={(e) => setName(e.target.value)}
               />
               <CustomTextField
                 className={styles.amountField}
-                value={amount}
+                defaultValue={props.billView.amount}
+                type="text"
                 label="Amount"
                 name="amount"
                 variant="outlined"
-                type="text"
                 onChange={(e) => setAmount(e.target.value)}
               />
               <CustomTextField
                 className={styles.dateField}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                value={renewalDate}
+                defaultValue={props.billView.dueDate}
                 name="date"
                 InputLabelProps={{
                   shrink: true,
@@ -75,17 +76,17 @@ export default function AddSubscription(props) {
                 variant="outlined"
                 onChange={(e) => {
                   if (e.target.value) {
-                    setRenewalDate(e.target.value);
+                    setDate(e.target.value);
                     setHasValue(true);
                   } else {
                     setHasValue(false);
-                    setRenewalDate("");
+                    setDate("");
                   }
                 }}
-                label="Renewal Date"
+                label="Due Date"
                 type={hasValue || focus ? "date" : "text"}
               />
-              <CustomButton className={styles.saveButton} variant="contained" onClick={handleAddSubscription}>
+              <CustomButton className={styles.saveButton} variant="contained" onClick={handleEditBill}>
                 Save
               </CustomButton>
             </Grid>
@@ -93,5 +94,5 @@ export default function AddSubscription(props) {
         </form>
       </Popup>
     </div>
-  );
+  )
 }

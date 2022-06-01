@@ -22,7 +22,7 @@ const CssTextField = styled(TextField)({
 });
 
 export default function CustomTextField(props) {
-  const { name, label, value, error = null, type, className, onChange } = props;
+  const { name, label, value, error = null, type, className, onChange, defaultValue } = props;
   return (
     <CssTextField
       className={className}
@@ -30,6 +30,7 @@ export default function CustomTextField(props) {
       label={label}
       name={name}
       value={value}
+      defaultValue={defaultValue}
       onChange={onChange}
       type={type}
       {...(error && { error: true, helperText: error })}

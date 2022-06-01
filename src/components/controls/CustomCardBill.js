@@ -5,7 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import styles from "./styles/CustomCard.module.css";
 
 export default function CustomCardBill(props) {
-  const { className, cardContent, handleDelete } = props;
+  const { className, cardContent, handleDelete, handleEdit } = props;
 
   const CssCard = styled(Card) ({
     background: "linear-gradient(180deg, #13C690 24.48%, #3DC79D 100%);",
@@ -29,7 +29,7 @@ export default function CustomCardBill(props) {
           <strong>Due Date:</strong> {cardContent.dueDate}
         </CardContent>
         <CardActions className={styles.icons}>
-          <IconButton><EditIcon className={styles.editIcon}/></IconButton>
+          <IconButton onClick={() => handleEdit(cardContent.billId)}><EditIcon className={styles.editIcon}/></IconButton>
           <IconButton onClick={() => handleDelete(cardContent.billId)}><DeleteIcon className={styles.deleteIcon}/></IconButton>
         </CardActions>
       </CssCard>
