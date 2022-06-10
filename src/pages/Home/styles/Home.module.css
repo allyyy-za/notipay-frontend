@@ -1,19 +1,8 @@
-.subscription {
-    position: absolute;
-    width: 1240px;
-    height: 241px;
-    left: 100px;
-    top: 120px;
+.stack {
+    position: absolute !important;
+    top: 100px !important;
+    left: 100px !important;
 }
-
-.bill {
-    position: absolute;
-    width: 1240px;
-    height: 241px;
-    left: 100px;
-    top: 380px;
-}
-
 .title {
     font-family: 'Open Sans';
     font-style: normal;
@@ -27,4 +16,9 @@
 .popup {
     width: 443px;
     height: 501px;
+}
+
+.footer {
+    height:50px;
+    color: white;
 }

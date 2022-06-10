@@ -5,14 +5,14 @@ import CustomTextField from "../../../../components/controls/CustomTextField";
 import Popup from "../../../../components/controls/Popup";
 import styles from "./styles/BillView.module.css";
 
-export default class BillView extends Component {
+export default class SubscriptionView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      billId: 0,
-      billName: "",
+      subscriptionId: 0,
+      subscriptionName: "",
       amount: 0,
-      dueDate: "",
+      renewalDate: "",
       focus: false,
       hasValue: false,
     };
@@ -20,25 +20,25 @@ export default class BillView extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      billId: nextProps.billView.billId,
-      billName: nextProps.billView.billName,
-      amount: nextProps.billView.amount,
-      dueDate: nextProps.billView.dueDate,
+      subscriptionId: nextProps.subscriptionView.subscriptionId,
+      subscriptionName: nextProps.subscriptionView.subscriptionName,
+      amount: nextProps.subscriptionView.amount,
+      renewalDate: nextProps.subscriptionView.renewalDate,
       focus: false,
       hasValue: false,
     });
   }
 
-  billNameHandler(e) {
-    this.setState({ billName: e.target.value });
+  subscriptionNameHandler(e) {
+    this.setState({ subscriptionName: e.target.value });
   }
 
   amountHandler(e) {
     this.setState({ amount: e.target.value });
   }
 
-  dueDateHandler(e) {
-    this.setState({ dueDate: e.target.value });
+  renewalDateHandler(e) {
+    this.setState({ renewalDate: e.target.value });
   }
 
   onFocus = () => this.setState({ focus: true });
@@ -49,7 +49,7 @@ export default class BillView extends Component {
     e.preventDefault();
     const bill = this.state;
     const auth = localStorage.getItem("authToken");
-    fetch("api/bills/billId=" + this.state.billId, {
+    fetch("api/subscriptions/subscriptionId=" + this.state.subscriptionId, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default class BillView extends Component {
       body: JSON.stringify(bill),
     }).then((response) => {
       if (response.status === 200) {
-        console.log("Bill edited.");
+        console.log("Subscription edited.");
         window.location.reload();
       }
     });
@@ -72,15 +72,15 @@ export default class BillView extends Component {
             <Grid container>
               <Grid item xs={12}>
                 <div className={styles.title}>
-                  <Typography className={styles.addBillLabel}>Bills</Typography>
+                  <Typography className={styles.addBillLabel}>Subscriptions</Typography>
                 </div>
                 <CustomTextField
                   className={styles.nameField}
-                  value={this.state.billName}
-                  label="Name of Bill"
+                  value={this.state.subscriptionName}
+                  label="Name of Subscription"
                   name="name"
                   variant="outlines"
-                  onChange={(e) => this.billNameHandler(e)}
+                  onChange={(e) => this.subscriptionNameHandler(e)}
                 />
                 <CustomTextField
                   className={styles.amountField}
@@ -95,7 +95,7 @@ export default class BillView extends Component {
                   className={styles.dateField}
                   onFocus={this.state.focus}
                   onBlur={this.state.onBlur}
-                  value={this.state.dueDate}
+                  value={this.state.renewalDate}
                   name="date"
                   InputLabelProps={{
                     shrink: true,
@@ -103,14 +103,14 @@ export default class BillView extends Component {
                   variant="outlined"
                   onChange={(e) => {
                     if (e.target.value) {
-                      this.dueDateHandler(e);
+                      this.renewalDateHandler(e);
                       this.setHasValue(true);
                     } else {
                       this.setHasValue(false);
-                      this.dueDateHandler("");
+                      this.renewalDateHandler("");
                     }
                   }}
-                  label="Due Date"
+                  label="Renewal Date"
                   type={this.state.hasValue || this.state.focus ? "date" : "text"}
                 />
                 <CustomButton className={styles.saveButton} variant="contained" onClick={this.handleEditBill}>

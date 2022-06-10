@@ -5,7 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import styles from "./styles/CustomCard.module.css";
 
 export default function CustomCardSubscription(props) {
-  const { className, cardContent, handleDelete } = props;
+  const { className, cardContent, handleDelete, handleEdit } = props;
 
   const CssCard = styled(Card) ({
     background: "linear-gradient(180deg, #197AFF 24.48%, #3F90FF 100%)",
@@ -29,7 +29,7 @@ export default function CustomCardSubscription(props) {
           <strong>Renewal Date:</strong> {cardContent.renewalDate}
         </CardContent>
         <CardActions className={styles.icons}>
-          <IconButton><EditIcon className={styles.editIcon}/></IconButton>
+          <IconButton onClick={() => handleEdit(cardContent.subscriptionId)}><EditIcon className={styles.editIcon}/></IconButton>
           <IconButton onClick={() => handleDelete(cardContent.subscriptionId)}><DeleteIcon className={styles.deleteIcon}/></IconButton>
         </CardActions>
       </CssCard>

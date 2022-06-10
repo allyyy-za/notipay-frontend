@@ -5,11 +5,15 @@ import AddIcon from '@mui/icons-material/Add';
 import { useLocalState } from "../../../../util/useLocalStorage";
 import styles from "./Subscriptions.module.css"
 import AddSubscription from "../modals/AddSubscription";
+import SubscriptionView from "../modals/SubscriptionView";
 
 export default function Subscriptions() {
   const [auth, setAuth] = useLocalState("", "authToken");
   const [subscriptions, setSubscriptions] = useState([]);
   const [openAddSubscriptionModal, setOpenAddSubscriptionModal] = useState(false);
+  const [openSubscriptionViewModal, setOpenSubscriptionViewModal] = useState(false);
+  const [subscriptionView, setSubscriptionView] = useState({});
+
   const handleOpenAddSubscription = () => setOpenAddSubscriptionModal(true);
 
   useEffect(() => {
@@ -38,24 +42,21 @@ export default function Subscriptions() {
     setSubscriptions(updatedSubscriptions);
   }
 
-  // const handleAddSubscription = (e) => {
-  //   e.preventDefault();
-  //   const subscription = { subscriptionName, amount, renewalDate };
-  //   fetch("api/subscriptions", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Authorization: `Bearer ${auth}`,
-  //     },
-  //     body: JSON.stringify(subscription),
-  //   })
-  //     .then((response) => {
-  //       if (response.status === 200) return response.json();
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //     });
-  // };
+  const handleViewSubscription = (subscriptionId) => {
+    fetch("api/subscriptions/subscriptionId=" + subscriptionId, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${auth}`,
+      },
+    }).then((response) => {
+      if (response.status === 200) return response.json();
+    })
+    .then((data) => {
+      setSubscriptionView(data)
+      setOpenSubscriptionViewModal(true);
+    });
+  }
 
   return ( 
     <div>
@@ -63,7 +64,7 @@ export default function Subscriptions() {
       <Grid container spacing={3}>
         {subscriptions.map(subscription => (
           <Grid item  key={subscription.subscriptionId}>
-            <CustomCardSubscription cardContent={subscription} handleDelete={handleDeleteSubscription} />
+            <CustomCardSubscription cardContent={subscription} handleDelete={handleDeleteSubscription} handleEdit={handleViewSubscription}/>
           </Grid>
         ))}
         <Grid item>
@@ -71,6 +72,7 @@ export default function Subscriptions() {
         </Grid>
       </Grid>
       <AddSubscription openPopup={openAddSubscriptionModal} setOpenPopup={setOpenAddSubscriptionModal}/>
+      <SubscriptionView openPopup={openSubscriptionViewModal} setOpenPopup={setOpenSubscriptionViewModal} subscriptionView={subscriptionView} />
     </div>
   );
 }

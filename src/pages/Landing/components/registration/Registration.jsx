@@ -81,9 +81,9 @@ export default function Registration(props) {
               <CustomButton className={styles.signUpButton} variant="contained" onClick={handleSignUp}>
                 SIGN UP
               </CustomButton>
-              <Link href="#" underline="none" className={styles.alreadyLink}>
+              {/* <Link href="#" underline="none" className={styles.alreadyLink}>
                 Already have an account? <b>Sign In</b>
-              </Link>
+              </Link> */}
             </div>
           </Grid>
         </Grid>

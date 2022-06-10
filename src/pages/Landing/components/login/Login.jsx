@@ -65,12 +65,12 @@ export default function Login(props) {
               <CustomButton className={styles.signInButton} variant="contained" onClick={handleSignIn}>
                 SIGN IN
               </CustomButton>
-              <Link href="#" underline="none" className={styles.createLink}>
+              {/* <Link href="#" underline="none" className={styles.createLink}>
                 No Account? <b>Create Now</b>
               </Link>
               <Link href="#" underline="none" className={styles.forgotLink}>
                 Forgot Password?
-              </Link>
+              </Link> */}
             </div>
           </Grid>
         </Grid>
