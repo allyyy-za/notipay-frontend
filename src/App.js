@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import PrivateRoute from "./util/PrivateRoute";
 import Subscriptions from "./pages/Home/components/subscriptions/Subscriptions";
 import AddBill from "./pages/Home/components/modals/AddBill";
+import Account from "./pages/Home/components/modals/Account";
 
 function App() {
   return (

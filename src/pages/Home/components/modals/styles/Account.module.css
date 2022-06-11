@@ -1,0 +1,62 @@
+.accountLabel {
+  position: absolute !important;
+  width: 300px !important;
+  height: 44px !important;
+  left: 75px !important;
+  top: 79px !important;
+
+  font-family: 'Open Sans' !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 30px !important;
+  line-height: 44px !important;
+  text-align: center !important;
+
+  background: linear-gradient(180deg, #34C2EB 0%, #13C690 87.5%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.nameField {
+  position: absolute !important;
+  width: 334px !important;
+  height: 47px !important;
+  left: 54px !important;
+  top: 180px !important;
+}
+
+.emailField {
+  position: absolute !important;
+  width: 334px !important;
+  height: 47px !important;
+  left: 54px !important;
+  top: 255px!important;
+  border-color: #34C2EB !important;
+}
+
+.usernameField {
+  position: absolute !important;
+  width: 334px !important;
+  height: 47px !important;
+  left: 54px !important;
+  top: 330px!important;
+  border-color: #34C2EB !important;
+}
+
+.passwordField {
+  position: absolute !important;
+  width: 334px !important;
+  height: 47px !important;
+  left: 54px !important;
+  top: 405px!important;
+  border-color: #34C2EB !important;
+}
+
+.saveButton {
+  position: absolute !important;
+  width: 130px !important;
+  height: 50px !important;
+  left: 154px !important;
+  top: 500px !important;
+}

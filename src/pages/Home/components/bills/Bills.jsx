@@ -52,7 +52,7 @@ export default function Bills() {
       if (response.status === 200) return response.json();
     })
     .then((data) => {
-      setBillView(data)
+      setBillView(data);
       setOpenBillViewModal(true);
     });
   }
