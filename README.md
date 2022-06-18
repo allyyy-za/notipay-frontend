@@ -1,24 +1,21 @@
 # Notipay
----
 
 NotiPay is a paid subscriptions and bills manager web application that allows users to log subscription and bill services and manage payments in one place.
 
 NotiPay is the easiest way to manage subscriptions and bills and helps you pay on time, and you will never be late on payment, again.
 
 ## ✅ Features
----
 
 - Log paid subscription and bill services with their details such as renewal and due date, amount, and etc.
 - Track your paid subscriptions and bills with their renewal and due dates.
 
 ## 💻 Tech Stack for the Frontend
----
 - React.js
 - Material UI
 - Cascading Style Sheets
 
 
-## 🖥 Implementation of Technologies Used
+## 🖱 Implementation of Technologies Used
 
 ### React.js
 - React.js was used for the front-end of the web application.
