@@ -11,7 +11,7 @@ NotiPay is the easiest way to manage subscriptions and bills and helps you pay o
 - Log paid subscription and bill services with their details such as renewal and due date, amount, and etc.
 - Track your paid subscriptions and bills with their renewal and due dates.
 
-## 💻 Tech Stack for the Front-End
+## 💻 Tech Stack for the Frontend
 ---
 - React.js
 - Material UI
