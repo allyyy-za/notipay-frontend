@@ -12,6 +12,7 @@ export default function Registration(props) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -24,11 +25,12 @@ export default function Registration(props) {
       body: JSON.stringify(user),
     }).then((response) => {
         if(response.status === 200) {
-          console.log("New user registered.");
           navigate("/");
           window.location.reload();
+        } else {
+          return response.text();
         }
-    });
+    }).then((data) => { setError(data); });
   };
 
   return (
@@ -77,6 +79,7 @@ export default function Registration(props) {
             <Typography className={styles.note}>
               By clicking Sign up, I agree that I have read and accepted the Terms of Use and Privacy Policy.
             </Typography>
+            <h3 className={styles.errorMessage}>{error}</h3>
             <div className={styles.lower}>
               <CustomButton className={styles.signUpButton} variant="contained" onClick={handleSignUp}>
                 SIGN UP

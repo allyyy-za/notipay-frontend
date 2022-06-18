@@ -18,12 +18,29 @@
     background-clip: text !important;
 }
 
+.errorMessage { 
+    position: absolute;
+    width: 236px;
+    height: 18px;
+    left: 104px;
+    top: 370px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #FF0000;
+}
+
 p {
     position: absolute;
     width: 349px;
     height: 20px;
     left: 47px;
-    top: 123px;
+    top: 100px;
 
     font-family: 'Open Sans';
     font-style: normal;
@@ -73,7 +90,7 @@ img {
     width: 130px !important;
     height: 50px !important;
     left: 154px !important;
-    top: 391px !important;
+    top: 424px !important;
 }
 
 .createLink {

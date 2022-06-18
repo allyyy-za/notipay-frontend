@@ -1,5 +1,6 @@
 import { Grid, Stack, Typography } from '@mui/material';
 import React, { Component } from 'react'
+import { useNavigate } from 'react-router-dom';
 import CustomButton from '../../../../components/controls/CustomButton';
 import CustomTextField from '../../../../components/controls/CustomTextField';
 import Popup from '../../../../components/controls/Popup';
@@ -56,6 +57,7 @@ export default class Account extends Component {
     }).then((response) => {
       if (response.status === 200) {
         console.log("User edited.");
+        localStorage.removeItem("authToken");
         window.location.reload();
       }
     });

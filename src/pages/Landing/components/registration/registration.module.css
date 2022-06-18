@@ -18,6 +18,25 @@
     background-clip: text !important;
 }
 
+.errorMessage { 
+    position: absolute;
+    width: 236px;
+    height: 18px;
+    left: 104px;
+    top: 440px;
+    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FF0000;
+}
+
 p {
     position: absolute;
     width: 349px;
@@ -81,7 +100,7 @@ img {
     width: 130px !important;
     height: 50px !important;
     left: 157px !important;
-    top: 500px !important;
+    top: 540px !important;
 }
 
 .alreadyLink {
@@ -112,10 +131,10 @@ img {
 
 .note {
     position: absolute !important;
-    width: 300px !important;
+    width: 292px !important;
     height: 36px !important;
     left: 76px !important;
-    top: 450px !important;
+    top: 495px !important;
 
     font-family: 'Open Sans' !important;
     font-style: normal !important;

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import CustomButton from "../../../../components/controls/CustomButton";
 import CustomTextField from "../../../../components/controls/CustomTextField";
 import Popup from "../../../../components/controls/Popup";
-import styles from "./styles/BillView.module.css";
+import styles from "./styles/SubscriptionView.module.css";
 
 export default class SubscriptionView extends Component {
   constructor(props) {

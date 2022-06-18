@@ -22,9 +22,6 @@ export default function Navbar() {
         <Button onClick={openSignUpModal} className={styles.signup}>
           Sign Up
         </Button>
-        <Button className={styles.about}>
-          About
-        </Button>
       </header>
       <Login openPopup={openSignInForm} setOpenPopup={setOpenSignInForm} />
       <Registration openPopup={openSignUpForm} setOpenPopup={setOpenSignUpForm} />

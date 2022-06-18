@@ -12,6 +12,7 @@ export default function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [auth, setAuth] = useLocalState("", "authToken");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -24,14 +25,15 @@ export default function Login(props) {
       body: JSON.stringify(user),
     }).then((response) => {
       if (response.status === 200) {
-        console.log("Successful login.");
         setAuth(response.headers.get("Authorization"));
         if (auth) {
           navigate("/home");
           window.location.reload();
         }
+      } else {
+        return response.text();
       }
-    });
+    }).then((data) => { setError(data); });
   };
 
   return (
@@ -44,6 +46,7 @@ export default function Login(props) {
               <Typography className={styles.signInLabel}>Sign In</Typography>
               <p>Start keeping track of your subscriptions and bills.</p>
             </div>
+            <h3 className={styles.errorMessage}>{error}</h3>
             <CustomTextField
               className={styles.usernameField}
               value={username}
