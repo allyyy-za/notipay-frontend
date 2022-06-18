@@ -74,7 +74,7 @@ NotiPay is the easiest way to manage subscriptions and bills and helps you pay o
 - To know more React.js, see the documentation: [React.js Documentation](https://reactjs.org/)
 
 
-## Material UI
+### React.js
 - Material UI was used for the components of the front-end of the web application.
 - How is it used on the web application?
     - Initial Setup
